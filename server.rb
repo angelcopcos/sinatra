@@ -1,7 +1,11 @@
 require 'sinatra'
 
 get '/' do
-  (1 + 1).to_s
+ File.read(File.join('public', 'hello.txt'))
+end
+
+get '/' do
+  "<strong>Hello</strong>"
 end
 
 get '/sinatra' do
